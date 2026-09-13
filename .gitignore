@@ -13,3 +13,12 @@ venv/
 __pycache__/
 *.pyc
 .DS_Store
+
+# Local npx skills install (canonical skills live in skills/)
+.agents/
+.claude/
+.cursor/
+skills-lock.json
+
+# Built locally; regenerate with: npx --yes @anthropic-ai/mcpb pack
+*.mcpb

@@ -1,5 +1,14 @@
 # Google Drive MCP Setup (Cursor)
 
+This page is the Cursor-only copy. All four hosts: [setup.md](./setup.md). Agent playbook: [../skills/setup/SKILL.md](../skills/setup/SKILL.md).
+
+Paste into this chat if you want the agent to do it:
+
+```
+Install https://github.com/ankush-sw/gdrive-mcp
+Read AGENTS.md and skills/setup/SKILL.md. Follow the setup skill until list_recent_files passes on this host.
+```
+
 Create your own GCP project and Desktop OAuth client. The server exposes 29 tools.
 
 **Last updated:** September 12, 2026

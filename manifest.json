@@ -1,0 +1,60 @@
+{
+  "manifest_version": "0.3",
+  "name": "gdrive-mcp",
+  "display_name": "Google Drive",
+  "version": "1.0.3",
+  "description": "Local Google Workspace MCP. 29 Drive / Docs / Sheets / Slides tools. Your OAuth keys, on your machine.",
+  "long_description": "What this is: a local Python process (`server.py`) that calls Google Drive, Docs, Sheets, and Slides with a Desktop OAuth token you create. Not Google's official connector. Not listed in Anthropic's extension directory.\n\nWhy Claude warns \"access to everything\" / \"not verified by Anthropic\": every sideloaded .mcpb gets that text. Local MCP has no sandbox. Anthropic has not reviewed this file. We cannot change that dialog.\n\nWhat we actually touch: OAuth files in the folder you pick (~/.gdrive-mcp). Google APIs only. No extra analytics host. Scopes are full Drive + Docs + Sheets + Slides write (needed for edit, comment, share, move).\n\nThis bundle includes TRUST.md and PRIVACY.md next to server.py. Unzip the .mcpb (it is a zip) to read them offline. Same files on GitHub so you can compare: https://github.com/ankush-sw/gdrive-mcp/blob/main/TRUST.md and https://github.com/ankush-sw/gdrive-mcp/blob/main/PRIVACY.md\n\nGoogle Drive is a trademark of Google Inc.",
+  "author": {
+    "name": "Ankush Rustagi",
+    "url": "https://github.com/ankush-sw/gdrive-mcp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ankush-sw/gdrive-mcp.git"
+  },
+  "homepage": "https://github.com/ankush-sw/gdrive-mcp",
+  "documentation": "https://github.com/ankush-sw/gdrive-mcp/blob/main/TRUST.md",
+  "support": "https://github.com/ankush-sw/gdrive-mcp/issues",
+  "icon": "icon.png",
+  "license": "MIT",
+  "privacy_policies": [
+    "https://github.com/ankush-sw/gdrive-mcp/blob/main/PRIVACY.md",
+    "https://policies.google.com/privacy"
+  ],
+  "keywords": ["google-drive", "docs", "sheets", "slides", "workspace"],
+  "compatibility": {
+    "claude_desktop": ">=1.0.0",
+    "platforms": ["darwin", "win32", "linux"],
+    "runtimes": {
+      "python": ">=3.11"
+    }
+  },
+  "server": {
+    "type": "python",
+    "entry_point": "server.py",
+    "mcp_config": {
+      "command": "${user_config.python}",
+      "args": ["${__dirname}/server.py"],
+      "env": {
+        "GDRIVE_MCP_DIR": "${user_config.creds_dir}",
+        "GDRIVE_CREDS_DIR": "${user_config.creds_dir}"
+      }
+    }
+  },
+  "user_config": {
+    "python": {
+      "type": "file",
+      "title": "Python interpreter",
+      "description": "Use Browse. Pick ~/.gdrive-mcp/server/venv/bin/python (the venv python, not system python3).",
+      "required": true
+    },
+    "creds_dir": {
+      "type": "directory",
+      "title": "Credentials folder",
+      "description": "Use Browse. Pick ~/.gdrive-mcp (the folder with gcp-oauth.keys.json and token.json).",
+      "required": true
+    }
+  },
+  "tools_generated": true
+}

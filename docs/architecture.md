@@ -22,9 +22,9 @@ How the server works, how it authenticates, and how requests flow from Cursor th
 ## System Overview
 
 ```
-CURSOR IDE
-───────────
-  Composer (Agent)
+MCP HOST (Cursor, Claude, Codex)
+────────────────────────────────
+  Agent
      |
      | stdin/stdout (JSON-RPC 2.0)
      v

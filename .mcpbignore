@@ -1,0 +1,18 @@
+# TRUST.md and PRIVACY.md stay at repo root so they pack into the .mcpb.
+.git/
+.agents/
+.claude/
+.cursor/
+docs/
+skills/
+*.mcpb
+venv/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+skills-lock.json
+token.json
+gcp-oauth.keys.json
+.env
+.env.*
