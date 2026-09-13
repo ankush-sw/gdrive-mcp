@@ -1,0 +1,15 @@
+# OAuth and local secrets. Never commit these.
+token.json
+gcp-oauth.keys.json
+.env
+.env.*
+gog-keyring-password
+*.pem
+*.key
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
