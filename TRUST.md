@@ -10,7 +10,7 @@ This file ships inside `gdrive-mcp.mcpb` (unzip the bundle, or open the installe
 
 ## What this is
 
-A local Python MCP server. Cursor, Claude Desktop, Claude Code, or Codex starts `server.py` on your machine. The process talks to Google Drive, Docs, Sheets, and Slides with a Desktop OAuth token *you* created. 29 tools. Native `docs.google.com` links on results.
+A local Python MCP server. Claude, Cursor, ChatGPT, Codex, Gemini, or any other MCP host starts `server.py` on your machine. The process talks to Google Drive, Docs, Sheets, and Slides with a Desktop OAuth token *you* created. 29 tools. Native `docs.google.com` links on results.
 
 It is not Google's official Drive connector. It is not an Anthropic-reviewed directory extension. It is this public repo, packed as `gdrive-mcp.mcpb` so Claude Desktop can show an icon.
 

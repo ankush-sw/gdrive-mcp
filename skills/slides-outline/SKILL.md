@@ -1,17 +1,18 @@
 ---
 name: slides-outline
-description: Turn Cursor or Claude Code work (chat, markdown, a Doc, a Sheet) into a Google Slides outline, then build the deck after the user approves. Use when they want a readout deck, a working outline in Slides, or to port agent output into a presentation.
+description: Turn chat, markdown, a Doc, or a Sheet into a Google Slides outline, then either build the deck in Drive or format the table for paste into Gemini. Use when they want a readout deck, a Gemini-ready outline, or to port agent output into a presentation.
 ---
 
 # Slides outline
 
-Port work you already have in the editor into a deck you can stand up and talk from. Outline first. Build second.
+Port work you already have in the editor into a deck you can stand up and talk from. Outline first. Then either build in Drive or format the table for Gemini. Do not call a Gemini API.
 
 ## When to use
 
 - "Put this chat / plan / doc into Slides"
 - Working readout from a coding or PM session
 - New deck from a Doc, Sheet, or local markdown
+- Outline they will paste into Gemini for generation
 
 ## Sources
 
@@ -36,16 +37,19 @@ If they name a Drive file, `search_drive` first and confirm the URL.
 
    Rules: one idea per slide. Split dense lists. Add a divider between sections. Last slide is next steps or links.
 
-2. **Wait.** Do not call `create_presentation` until they approve or mark the outline.
+2. **Wait.** Do not call `create_presentation` until they approve or mark the outline. Ask which exit they want if they did not say:
 
-3. **Build.**
+   - **Drive:** build the deck here (step 3).
+   - **Gemini:** format the approved table for paste. Title each slide, keep one idea per slide, no Drive create. Stop after you hand them the copy block. Do not call Gemini yourself.
+
+3. **Build (Drive exit only).**
    - `create_presentation` with the agreed title
    - `update_presentation` with `createSlide` ops (meaningful `objectId` values)
    - Add title + body text boxes (`createShape` TEXT_BOX + `insertText`). Condense. Do not paste a whole sheet row.
 
-4. **Read back.** `get_slide_content` on each new slide. Fix mismatches.
+4. **Read back (Drive exit only).** `get_slide_content` on each new slide. Fix mismatches.
 
-5. Hand back the `docs.google.com/presentation` URL.
+5. Hand back the `docs.google.com/presentation` URL, or the Gemini paste block.
 
 ## Text rules
 
@@ -56,5 +60,6 @@ If they name a Drive file, `search_drive` first and confirm the URL.
 ## Do not
 
 - Build the deck before the outline is accepted
+- Call Gemini or any slide-generation API
 - Restyle with a brand system unless they named one
 - Delete slides on an existing deck they still present from (propose a copy first)

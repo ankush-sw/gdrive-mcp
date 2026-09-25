@@ -1,11 +1,11 @@
 ---
 name: setup
-description: Install and validate the Google Workspace MCP on Cursor, Claude Desktop, Claude Code, or Codex. Use when the user pastes the gdrive-mcp repo URL, or asks to set up, install, configure, or test this Drive plugin.
+description: Install and validate the Google Workspace MCP on any MCP host (Claude, Cursor, ChatGPT, Codex, Gemini, and others). Use when the user pastes the gdrive-mcp repo URL, or asks to set up, install, configure, or test this Drive plugin.
 ---
 
 # Setup
 
-Walk one person from a blank machine to a passing smoke test. Human copy lives in [docs/setup.md](../../docs/setup.md). Same steps.
+Walk one person from a blank machine to a passing smoke test on whatever MCP host they use. Human copy lives in [docs/setup.md](../../docs/setup.md). Same steps. This server is host-neutral. Do not describe it as a Cursor-only plugin.
 
 Repo: `https://github.com/ankush-sw/gdrive-mcp`
 
@@ -30,7 +30,9 @@ Ask once if they did not name it. Default to the host you are running in.
 | Cursor | This chat is Cursor |
 | Claude Code | `claude` CLI or Claude Code IDE |
 | Claude Desktop | They said Claude app / Connectors / Extensions |
-| Codex | `codex` CLI |
+| Codex / ChatGPT | `codex` CLI or ChatGPT with MCP |
+| Gemini | They named Gemini or a Gemini MCP client |
+| Other | Any client that can spawn a local stdio MCP |
 
 `$HOME` below is their home. On this Mac that is `/Users/kush`. Expand it yourself. Never leave `${HOME}` or `YOUR_USERNAME` in a path you type into a GUI.
 

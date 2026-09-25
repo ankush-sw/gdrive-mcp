@@ -16,7 +16,7 @@ Read AGENTS.md and skills/setup/SKILL.md. Follow the setup skill until list_rece
 1. Python 3.11+
 2. A GCP project you own, with Drive, Docs, Sheets, and Slides APIs enabled
 3. A Desktop OAuth client downloaded as `gcp-oauth.keys.json`
-4. One host: Cursor, Claude Desktop, Claude Code, and/or Codex
+4. One MCP host: Claude, Cursor, ChatGPT, Codex, Gemini, or any client that can run a local stdio server
 
 OAuth is the only auth the server uses. Keys stay in `~/.gdrive-mcp/`.
 

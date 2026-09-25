@@ -1,6 +1,6 @@
 # Architecture: Custom Google Workspace MCP Server
 
-How the server works, how it authenticates, and how requests flow from Cursor through MCP to Google APIs and back. Read this if you want to understand the system design, extend it, or build something similar for a different API.
+How the server works, how it authenticates, and how requests flow from any MCP host through this process to Google APIs and back. Read this if you want to understand the system design, extend it, or build something similar for a different API.
 
 ---
 
@@ -22,7 +22,7 @@ How the server works, how it authenticates, and how requests flow from Cursor th
 ## System Overview
 
 ```
-MCP HOST (Cursor, Claude, Codex)
+MCP HOST (Claude, Cursor, ChatGPT, Codex, Gemini, ...)
 ────────────────────────────────
   Agent
      |

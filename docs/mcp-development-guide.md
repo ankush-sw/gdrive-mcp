@@ -1,6 +1,6 @@
 # Building Custom MCP Servers from Public APIs
 
-A practical guide for turning any well-documented, OAuth-authenticated public API into a custom MCP server for Cursor. Based on lessons learned building the Google Workspace MCP (Drive, Docs, Sheets, Slides).
+A practical guide for turning any well-documented, OAuth-authenticated public API into a custom MCP server any host can run. Based on lessons learned building the Google Workspace MCP (Drive, Docs, Sheets, Slides).
 
 This isn't theory. Every section comes from a real problem encountered during development.
 

@@ -1,6 +1,6 @@
 # Install this repo
 
-Paste this file's URL, or the repo URL, into Cursor, Claude Code, or Codex. The agent should take it from here.
+Paste this file's URL, or the repo URL, into any agent (Claude, Cursor, ChatGPT, Codex, Gemini, or another MCP host). The agent should take it from here.
 
 ```
 Install https://github.com/ankush-sw/gdrive-mcp

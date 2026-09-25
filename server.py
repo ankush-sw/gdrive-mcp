@@ -2,7 +2,7 @@
 Google Workspace MCP Server
 
 A FastMCP server providing full read/write access to Google Drive, Docs,
-Sheets, and Slides. Designed for Cursor IDE integration via stdio transport.
+Sheets, and Slides. Local stdio MCP. Any host that can spawn a stdio server.
 
 Tools:
   Drive:   search_drive, list_recent_files, list_folder_contents,

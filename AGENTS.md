@@ -2,7 +2,7 @@
 
 Folder-and-down rules for this repo only.
 
-If the user pasted this repo URL, SETUP.md, skills/setup/SKILL.md, or said install, set up, configure, or "make Drive work in Cursor / Claude / Codex":
+If the user pasted this repo URL, SETUP.md, skills/setup/SKILL.md, or said install, set up, configure, or "make Drive work in Claude / Cursor / ChatGPT / Codex / Gemini":
 
 1. STOP. Read [skills/setup/SKILL.md](skills/setup/SKILL.md).
 2. Run that playbook. Do not invent a second installer.

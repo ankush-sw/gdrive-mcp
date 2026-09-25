@@ -17,11 +17,11 @@ The local process stores two files in the folder you configure (default `~/.gdri
 
 ## How it is used
 
-`server.py` uses that token to call Google Drive, Docs, Sheets, and Slides APIs when a host (Cursor, Claude, Codex) invokes a tool. Google's handling of that traffic is in [Google's privacy policy](https://policies.google.com/privacy).
+`server.py` uses that token to call Google Drive, Docs, Sheets, and Slides APIs when a host (Claude, Cursor, ChatGPT, Codex, Gemini, or another MCP client) invokes a tool. Google's handling of that traffic is in [Google's privacy policy](https://policies.google.com/privacy).
 
 ## Sharing
 
-No third party besides Google (and the AI host you already run) sees tool results. The host is Cursor, Claude Desktop, Claude Code, or Codex on your machine.
+No third party besides Google (and the AI host you already run) sees tool results. The host is whichever MCP client you run on your machine.
 
 ## Retention
 
