@@ -134,4 +134,4 @@ Pair this server with Granola (`https://mcp.granola.ai/mcp` or the Cursor plugin
 - [README.md](../README.md)
 - [setup skill](../skills/setup/SKILL.md)
 - [architecture.md](./architecture.md)
-- [PLACEHOLDERS.md](../PLACEHOLDERS.md)
+- [TRUST.md](../TRUST.md)

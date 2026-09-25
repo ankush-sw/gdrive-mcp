@@ -1,10 +1,43 @@
 # Google Workspace MCP
 
-One local server for Drive, Docs, Sheets, and Slides, plus three skills for the jobs the official Drive MCP does not cover: prefill a deck, recap what the room said (not your pitch), and file work from other tools into a folder you can share.
+One local server with full CRUD on Drive, Docs, Sheets, and Slides. Search, create, edit in place, comment, share, move. Plus three skills the official Drive MCP does not ship: prefill a deck, recap what the room said (not your pitch), and file work from other tools into a folder you can share.
 
 Works on any host that can run a local MCP server: Claude, Cursor, ChatGPT, Codex, Gemini, and others. You create the Desktop OAuth client. Keys stay in `~/.gdrive-mcp/`.
 
 **Last updated:** September 25, 2026
+
+## vs the official Drive MCP
+
+What most hosts list as "Google Drive" is either the local readonly plugin (`@modelcontextprotocol/server-gdrive`) or [Google's Drive remote](https://developers.google.com/workspace/drive/api/guides/configure-mcp-server) (8 tools: search, read, create, copy, download, metadata, permissions list, recent). That is Drive-only, and it is not full CRUD.
+
+This server is one process for the whole Workspace surface: Drive **and** Docs, Sheets, and Slides.
+
+| Capability | Official Drive MCP | This server |
+| --- | --- | --- |
+| Search and read Drive files | Yes | Yes |
+| Create a new Drive file | Remote only | Yes |
+| Full CRUD on Drive (move, folders, comments, share, revoke) | No | Yes |
+| Full CRUD on Google Docs | No | Yes |
+| Full CRUD on Google Sheets | No | Yes |
+| Full CRUD on Google Slides | No | Yes |
+| Native `docs.google.com` URL on results | No | Yes |
+| Structured slide text for a transcript diff | No | Yes |
+| Bundled workflow skills | No | Yes |
+
+Google also ships separate remotes for Docs, Sheets, and Slides. Those can write if you install all of them. They still omit comments, share, this skill pack, and a single local connector you own.
+
+Same Desktop OAuth shape Google's Drive MCP asks for. You own the GCP project and the keys.
+
+## Get started
+
+Paste this into any agent. Blank URL: [SETUP.md](SETUP.md).
+
+```
+Install https://github.com/ankush-sw/gdrive-mcp
+Read AGENTS.md and skills/setup/SKILL.md. Follow the setup skill until list_recent_files passes on this host.
+```
+
+Human checklist and host JSON: [docs/setup.md](docs/setup.md). What the process touches: [TRUST.md](TRUST.md). [PRIVACY.md](PRIVACY.md).
 
 ## The package
 
@@ -18,7 +51,7 @@ Notion Slack Linear GitHub Granola
   deck, folder, share, quotes
 ```
 
-This repo is the Drive write side and the playbooks. It does not include Notion, Slack, Linear, GitHub, or Granola. Pair those MCPs when the workflow needs them.
+This repo is the Workspace write side and the playbooks. It does not include Notion, Slack, Linear, GitHub, or Granola. Pair those MCPs when the workflow needs them.
 
 | Scenario | Skill | What you say |
 | --- | --- | --- |
@@ -106,44 +139,13 @@ Pull the Linear epic and the Slack thread.
 Create a Drive folder, file a summary Doc, and share it as commenter with this list.
 ```
 
-## vs the official Drive MCP
-
-What most hosts list as "Google Drive" is either the local readonly plugin (`@modelcontextprotocol/server-gdrive`) or [Google's Drive remote](https://developers.google.com/workspace/drive/api/guides/configure-mcp-server) (8 tools: search, read, create, copy, download, metadata, permissions list, recent). That is not full CRUD on Workspace files.
-
-| Capability | Official Drive MCP | This server |
-| --- | --- | --- |
-| Search and read files | Yes | Yes |
-| Create a new file | Remote only | Yes |
-| Edit an existing Doc, Sheet, or Slides file | No | Yes |
-| Comments and replies | No | Yes |
-| Share and revoke | No | Yes |
-| Move files and manage folders | No | Yes |
-| Native `docs.google.com` URL on results | No | Yes |
-| Structured slide text for a transcript diff | No | Yes |
-| Bundled workflow skills | No | Yes |
-
-Google also ships separate remotes for Docs, Sheets, and Slides. Those can write if you install all of them. They still omit comments, share, this skill pack, and a single local connector you own.
-
-Same Desktop OAuth shape Google's Drive MCP asks for. You own the GCP project and the keys.
-
-## Get started
-
-Paste this into any agent. Blank URL: [SETUP.md](SETUP.md).
-
-```
-Install https://github.com/ankush-sw/gdrive-mcp
-Read AGENTS.md and skills/setup/SKILL.md. Follow the setup skill until list_recent_files passes on this host.
-```
-
-Human checklist and host JSON: [docs/setup.md](docs/setup.md). What the process touches: [TRUST.md](TRUST.md). [PRIVACY.md](PRIVACY.md).
-
 ## Tools
 
 29 tools. Full list in [docs/architecture.md](docs/architecture.md).
 
 **Drive:** search, recent, folders, shared, starred, metadata, content, comments, upload, copy, move, export, create folder, comment, reply, share, list permissions, revoke
 
-**Docs / Sheets / Slides:** read and update in place, plus create
+**Docs / Sheets / Slides:** create, read, and update in place
 
 ## Docs
 
@@ -152,7 +154,6 @@ Human checklist and host JSON: [docs/setup.md](docs/setup.md). What the process 
 - [Trust](TRUST.md)
 - [Privacy](PRIVACY.md)
 - [Architecture](docs/architecture.md)
-- [Building an MCP from a public API](docs/mcp-development-guide.md)
 
 ## License
 
