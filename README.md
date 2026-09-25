@@ -14,15 +14,15 @@ This server is one process for the whole Workspace surface: Drive **and** Docs, 
 
 | Capability | Official Drive MCP | This server |
 | --- | --- | --- |
-| Search and read Drive files | Yes | Yes |
-| Create a new Drive file | Remote only | Yes |
-| Full CRUD on Drive (move, folders, comments, share, revoke) | No | Yes |
-| Full CRUD on Google Docs | No | Yes |
-| Full CRUD on Google Sheets | No | Yes |
-| Full CRUD on Google Slides | No | Yes |
-| Native `docs.google.com` URL on results | No | Yes |
-| Structured slide text for a transcript diff | No | Yes |
-| Bundled workflow skills | No | Yes |
+| Search and read Drive files | ✅ | ✅ |
+| Create a new Drive file | Remote only | ✅ |
+| Full CRUD on Drive (move, folders, comments, share, revoke) | ❌ | ✅ |
+| Full CRUD on Google Docs | ❌ | ✅ |
+| Full CRUD on Google Sheets | ❌ | ✅ |
+| Full CRUD on Google Slides | ❌ | ✅ |
+| Native `docs.google.com` URL on results | ❌ | ✅ |
+| Structured slide text for a transcript diff | ❌ | ✅ |
+| Bundled workflow skills | ❌ | ✅ |
 
 Google also ships separate remotes for Docs, Sheets, and Slides. Those can write if you install all of them. They still omit comments, share, this skill pack, and a single local connector you own.
 
