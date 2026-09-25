@@ -13,7 +13,7 @@ What most hosts list as "Google Drive" is either the local readonly plugin (`@mo
 This server is one process for the whole Workspace surface: Drive **and** Docs, Sheets, and Slides.
 
 | Capability | Official Drive MCP | This server |
-| --- | --- | --- |
+| --- | :---: | :---: |
 | Search and read Drive files | ✅ | ✅ |
 | Create a new Drive file | Remote only | ✅ |
 | Full CRUD on Drive (move, folders, comments, share, revoke) | ❌ | ✅ |
