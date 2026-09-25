@@ -4,7 +4,7 @@
   "display_name": "Google Drive",
   "version": "1.0.3",
   "description": "Local Google Workspace MCP. 29 Drive / Docs / Sheets / Slides tools. Your OAuth keys, on your machine.",
-  "long_description": "What this is: a local Python process (`server.py`) that calls Google Drive, Docs, Sheets, and Slides with a Desktop OAuth token you create. Not Google's official connector. Not listed in Anthropic's extension directory.\n\nWhy Claude warns \"access to everything\" / \"not verified by Anthropic\": every sideloaded .mcpb gets that text. Local MCP has no sandbox. Anthropic has not reviewed this file. We cannot change that dialog.\n\nWhat we actually touch: OAuth files in the folder you pick (~/.gdrive-mcp). Google APIs only. No extra analytics host. Scopes are full Drive + Docs + Sheets + Slides write (needed for edit, comment, share, move).\n\nThis bundle includes TRUST.md and PRIVACY.md next to server.py. Unzip the .mcpb (it is a zip) to read them offline. Same files on GitHub so you can compare: https://github.com/ankush-sw/gdrive-mcp/blob/main/TRUST.md and https://github.com/ankush-sw/gdrive-mcp/blob/main/PRIVACY.md\n\nGoogle Drive is a trademark of Google Inc.",
+  "long_description": "What this is: a local Python process (`server.py`) that calls Google Drive, Docs, Sheets, and Slides with a Desktop OAuth token you create. Not Google's official connector. Not listed in Anthropic's extension directory.\n\nWhy Claude warns \"access to everything\" / \"not verified by Anthropic\": every sideloaded .mcpb gets that text. Local MCP has no sandbox. Anthropic has not reviewed this file. We cannot change that dialog.\n\nWhat we actually touch: OAuth files in the folder you pick (~/.gdrive-mcp). Google APIs only. No extra analytics host. Scopes are full Drive + Docs + Sheets + Slides write (needed for edit, comment, share, move).\n\nThis bundle includes TRUST.md next to server.py (what we access, privacy, marks). Unzip the .mcpb to read it offline. Same file: https://github.com/ankush-sw/gdrive-mcp/blob/main/TRUST.md\n\nGoogle Drive is a trademark of Google Inc.",
   "author": {
     "name": "Ankush Rustagi",
     "url": "https://github.com/ankush-sw/gdrive-mcp"
@@ -19,7 +19,7 @@
   "icon": "icon.png",
   "license": "MIT",
   "privacy_policies": [
-    "https://github.com/ankush-sw/gdrive-mcp/blob/main/PRIVACY.md",
+    "https://github.com/ankush-sw/gdrive-mcp/blob/main/TRUST.md#privacy",
     "https://policies.google.com/privacy"
   ],
   "keywords": ["google-drive", "docs", "sheets", "slides", "workspace"],

@@ -30,14 +30,14 @@ Same Desktop OAuth shape Google's Drive MCP asks for. You own the GCP project an
 
 ## Get started
 
-Paste this into any agent. Blank URL: [SETUP.md](SETUP.md).
+Paste this into any agent. The repo URL is enough.
 
 ```
 Install https://github.com/ankush-sw/gdrive-mcp
 Read AGENTS.md and skills/setup/SKILL.md. Follow the setup skill until list_recent_files passes on this host.
 ```
 
-Human checklist and host JSON: [docs/setup.md](docs/setup.md). What the process touches: [TRUST.md](TRUST.md). [PRIVACY.md](PRIVACY.md).
+Human checklist and host JSON: [docs/setup.md](docs/setup.md). What the process touches: [TRUST.md](TRUST.md).
 
 ## The package
 
@@ -151,10 +151,10 @@ Create a Drive folder, file a summary Doc, and share it as commenter with this l
 
 - [Setup (human)](docs/setup.md)
 - [Setup (agent)](skills/setup/SKILL.md)
-- [Trust](TRUST.md)
-- [Privacy](PRIVACY.md)
+- [Trust and privacy](TRUST.md)
+- [Security (how to report)](SECURITY.md)
 - [Architecture](docs/architecture.md)
 
 ## License
 
-MIT. Copyright (c) 2026 Ankush Rustagi
+MIT. Copyright (c) 2026 Ankush Rustagi. Drive mark: see [TRUST.md](TRUST.md#marks).

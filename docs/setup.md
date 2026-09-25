@@ -84,7 +84,7 @@ We cannot rewrite that text. Local MCP bundles have no sandbox and no `permissio
 | Drop "not verified by Anthropic" | Get listed in Anthropic's desktop directory. Form: [clau.de/desktop-extention-submission](https://clau.de/desktop-extention-submission). Needs a real privacy policy, tool annotations, and review. |
 | Self-sign with `mcpb sign` | Does not change the dialog. Orgs can require a signature. Signing has also broken installs. |
 
-What we touch, and how to read the code: [TRUST.md](../TRUST.md) (also inside the `.mcpb`). Privacy: [PRIVACY.md](../PRIVACY.md).
+What we touch, and how to read the code: [TRUST.md](../TRUST.md) (also inside the `.mcpb`).
 
 ## Expected layout
 
@@ -134,4 +134,4 @@ Pair this server with Granola (`https://mcp.granola.ai/mcp` or the Cursor plugin
 - [README.md](../README.md)
 - [setup skill](../skills/setup/SKILL.md)
 - [architecture.md](./architecture.md)
-- [TRUST.md](../TRUST.md)
+- [TRUST.md](../TRUST.md) (privacy and marks are in this file)

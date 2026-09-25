@@ -3,7 +3,6 @@ token.json
 gcp-oauth.keys.json
 .env
 .env.*
-gog-keyring-password
 *.pem
 *.key
 

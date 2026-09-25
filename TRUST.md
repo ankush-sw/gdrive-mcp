@@ -2,10 +2,10 @@
 
 This file ships inside `gdrive-mcp.mcpb` (unzip the bundle, or open the installed extension folder). The same text is on GitHub so you can compare: [TRUST.md](https://github.com/ankush-sw/gdrive-mcp/blob/main/TRUST.md).
 
-**Last updated:** September 12, 2026
+**Last updated:** September 25, 2026
 
 - **Source:** [github.com/ankush-sw/gdrive-mcp](https://github.com/ankush-sw/gdrive-mcp)
-- **Privacy (in this bundle and on GitHub):** [PRIVACY.md](PRIVACY.md)
+- **Privacy:** [below](#privacy)
 - **Anthropic directory:** not listed. This page will say so here when that changes.
 
 ## What this is
@@ -87,8 +87,25 @@ Pack only from this repo: `npx --yes @anthropic-ai/mcpb pack`. Do not install a 
 
 Compare this file to GitHub. If they differ, do not install that bundle.
 
+## Privacy
+
+This connector runs on your computer. The author does not host your Drive files or your OAuth token.
+
+**Collected:** nothing is sent to the author or to this GitHub repo. The local process stores `gcp-oauth.keys.json` and `token.json` in the folder you configure (default `~/.gdrive-mcp/`).
+
+**Used:** `server.py` calls Google Drive, Docs, Sheets, and Slides APIs when your MCP host invokes a tool. Google's side: [policies.google.com/privacy](https://policies.google.com/privacy).
+
+**Sharing:** no third party besides Google and the host you already run sees tool results.
+
+**Retention:** tokens stay on disk until you delete `token.json` or revoke the app at [Google Account permissions](https://myaccount.google.com/permissions).
+
+**Contact:** bugs and questions in [Issues](https://github.com/ankush-sw/gdrive-mcp/issues). Vulnerabilities: [SECURITY.md](SECURITY.md).
+
+## Marks
+
+Google Drive is a trademark of Google Inc. `icon.png` is the 2026 Drive product mark from [Google's brand page](https://developers.google.com/workspace/drive/api/guides/branding). Resized to 512x512 only.
+
 ## Related
 
 - [docs/setup.md](docs/setup.md) (GitHub / clone; not inside the `.mcpb`)
 - [docs/architecture.md](docs/architecture.md)
-- [PRIVACY.md](PRIVACY.md)

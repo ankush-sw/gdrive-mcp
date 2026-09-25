@@ -1,4 +1,4 @@
-# TRUST.md and PRIVACY.md stay at repo root so they pack into the .mcpb.
+# TRUST.md stays at repo root so it packs into the .mcpb.
 .git/
 .agents/
 .claude/
